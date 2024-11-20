@@ -1,0 +1,19 @@
+{
+  "$schema": "https://swc.rs/schema.json",
+  "jsc": {
+    "parser": {
+      "syntax": "typescript",
+      "decorators": true
+    },
+    "target": "esnext",
+    "transform": {
+        "decoratorMetadata": true
+    },
+    "preserveAllComments": true
+  },
+  "module": {
+    "type": "nodenext"
+  },
+  "sourceMaps": true,
+  "exclude": ["node_modules"]
+}

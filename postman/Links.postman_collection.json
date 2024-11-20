@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "4b2728b6-be8a-42d9-8fff-ce4a1312b004",
+		"name": "Links",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33696667"
+	},
+	"item": [
+		{
+			"name": "Сохранить данные",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"payload\": \"Test123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/links",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"links"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получить данные",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/links/:id",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"links",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "e1055705-8096-4f62-8f3f-534664bc5346"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

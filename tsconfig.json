@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "ESNext",
+    "lib": ["ESNext"],
+    "baseUrl": "./",
+    "rootDirs": ["./src", "./scripts"],
+    "outDir": "./dist",
+    /* Настройки сборщика */
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "removeComments": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "incremental": true,
+    "skipLibCheck": true,
+
+    /* Настройки линтинга */
+    "strict": true,
+    // Отключено из-за DTO классов, где не нужен конструктор.
+    "strictPropertyInitialization": false,
+    // Отключено из-за возможности наличия слишком сложных для описания типов.
+    "noImplicitAny": false,
+    "allowUnusedLabels": false,
+    "allowImportingTsExtensions": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
+  },
+  "exclude": ["node_modules", "dist"]
+}

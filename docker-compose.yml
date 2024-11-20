@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:16.1-alpine
+    container_name: marketlab.postgres
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - ${DATABASE_VOLUME}:/var/lib/postgresql/data
+
+    environment:
+      POSTGRES_USER: local
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: postgres
+
+    restart: unless-stopped
+
+  backend:
+    container_name: marketlab.backend
+    build:
+      dockerfile: ./Dockerfile
+      context: ./
+
+    ports:
+      - "3000:3000"
+
+    restart: unless-stopped
