@@ -1,7 +1,7 @@
 import type { TestingModule } from '@nestjs/testing';
 import { Test } from '@nestjs/testing';
 import { LinksService } from '../../../src/domains/links/services/links.service.js';
-import { LinksRepository } from '../../../src/domains/links/repositories/links.repository.js';
+import type { LinksRepository } from '../../../src/domains/links/repositories/links.repository.js';
 import type { MockedObject } from 'jest-mock';
 import { mock } from 'jest-mock-extended';
 import type { LinkModel } from '../../../src/domains/links/models/link.model.js';
@@ -14,6 +14,7 @@ import {
 import { randomStringGenerator } from '@nestjs/common/utils/random-string-generator.util.js';
 import { v4 as uuid } from 'uuid';
 import { EntityNotFoundException } from '../../../src/app/exceptions/EntityNotFoundException.js';
+import { LINKS_REPOSITORY } from '../../../src/utils/types/constants/di.constant.js';
 
 describe('LinksService', () => {
   let service: LinksService | null = null;
@@ -47,7 +48,7 @@ describe('LinksService', () => {
       providers: [
         LinksService,
         {
-          provide: LinksRepository,
+          provide: LINKS_REPOSITORY,
           useValue: repositoryMock,
         },
       ],

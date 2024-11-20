@@ -1,0 +1,1 @@
+export const LINKS_REPOSITORY = 'LINKS_REPOSITORY';

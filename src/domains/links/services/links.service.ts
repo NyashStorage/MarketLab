@@ -1,12 +1,16 @@
-import { Injectable } from '@nestjs/common';
-import { LinksRepository } from '../repositories/links.repository.js';
+import { Inject, Injectable } from '@nestjs/common';
+import type { LinksRepository } from '../repositories/links.repository.js';
 import { LinkModel } from '../models/link.model.js';
 import { CreateLinkRequest } from '../dto/requests/create-link.request.js';
 import { EntityNotFoundException } from '../../../app/exceptions/EntityNotFoundException.js';
+import { LINKS_REPOSITORY } from '../../../utils/types/constants/di.constant.js';
 
 @Injectable()
 export class LinksService {
-  public constructor(private readonly linksRepository: LinksRepository) {}
+  public constructor(
+    @Inject(LINKS_REPOSITORY)
+    private readonly linksRepository: LinksRepository,
+  ) {}
 
   public async createLink(dto: CreateLinkRequest): Promise<LinkModel> {
     return await this.linksRepository.create(dto);
