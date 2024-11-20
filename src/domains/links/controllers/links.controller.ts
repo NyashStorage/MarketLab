@@ -18,6 +18,7 @@ import { ValidationErrorResponse } from '../../../app/dto/responses/validation-e
 import { ParseIdPipe } from '../../../app/pipes/parse-id.pipe.js';
 import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('links')
 @Controller('links')
 export class LinksController {
   public constructor(private readonly linksService: LinksService) {}
