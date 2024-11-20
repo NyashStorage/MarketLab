@@ -1,6 +1,6 @@
 import { DELETED_LINK, EXISTENT_LINK } from '../fixtures/links.fixture.ts';
 import type { DataSource } from 'typeorm';
-import { LinkEntity } from '../../src/links/entities/link.entity.js';
+import { LinkEntity } from '../../src/domains/links/entities/link.entity.js';
 
 async function seedLink(source: DataSource): Promise<void> {
   await source

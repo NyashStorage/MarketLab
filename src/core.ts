@@ -4,7 +4,7 @@ import type { INestApplication } from '@nestjs/common';
 import { Logger, ValidationPipe } from '@nestjs/common';
 import { CONFIGURATION } from './config/configuration.js';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
-import { isDevelopmentMode } from './helpers/development.helper.js';
+import { isDevelopmentMode } from './utils/helpers/development.helper.js';
 
 export async function bootstrap(
   appPromise: Promise<INestApplication>,

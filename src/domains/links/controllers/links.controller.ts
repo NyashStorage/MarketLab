@@ -9,13 +9,14 @@ import {
 } from '@nestjs/common';
 import { LinksService } from '../services/links.service.js';
 import { CreateLinkRequest } from '../dto/requests/create-link.request.js';
-import { EntityNotFoundException } from '../../app/exceptions/EntityNotFoundException.js';
+import { EntityNotFoundException } from '../../../app/exceptions/EntityNotFoundException.js';
 import { CreateLinkResponse } from '../dto/responses/create-link.response.js';
 import { GetLinkResponse } from '../dto/responses/get-link.response.js';
-import { ApiError } from '../../types/enums/api-error.enum.js';
-import { Describe } from '../../app/decorators/describe.decorator.js';
-import { ValidationErrorResponse } from '../../app/dto/responses/validation-error.response.js';
-import { ParseIdPipe } from '../../app/pipes/parse-id.pipe.js';
+import { ApiError } from '../../../utils/types/enums/api-error.enum.js';
+import { Describe } from '../../../app/decorators/describe.decorator.js';
+import { ValidationErrorResponse } from '../../../app/dto/responses/validation-error.response.js';
+import { ParseIdPipe } from '../../../app/pipes/parse-id.pipe.js';
+import { ApiTags } from '@nestjs/swagger';
 
 @Controller('links')
 export class LinksController {

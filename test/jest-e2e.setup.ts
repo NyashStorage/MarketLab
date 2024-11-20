@@ -8,7 +8,7 @@ import type { NestFastifyApplication } from '@nestjs/platform-fastify';
 import { FastifyAdapter } from '@nestjs/platform-fastify';
 import { cleanup, seed } from './helpers/seeding.helper.ts';
 import { DataSource } from 'typeorm';
-import { OPTIONS } from '../src/database/data-source-options.js';
+import { OPTIONS } from '../src/infrastructure/database/data-source-options.js';
 import { bootstrap } from '../src/core.js';
 
 export let supertestAgent: SuperAgentTest;

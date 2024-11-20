@@ -1,10 +1,10 @@
 import type { TestingModule } from '@nestjs/testing';
 import { Test } from '@nestjs/testing';
-import { LinksService } from '../../../src/links/services/links.service.js';
-import { LinksRepository } from '../../../src/links/repositories/links.repository.js';
+import { LinksService } from '../../../src/domains/links/services/links.service.js';
+import { LinksRepository } from '../../../src/domains/links/repositories/links.repository.js';
 import type { MockedObject } from 'jest-mock';
 import { mock } from 'jest-mock-extended';
-import type { LinkModel } from '../../../src/links/models/link.model.js';
+import type { LinkModel } from '../../../src/domains/links/models/link.model.js';
 import {
   DELETED_LINK,
   EXISTENT_LINK,

@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { DatabaseModule } from '../database/database.module.js';
-import { LinksModule } from '../links/links.module.js';
+import { DatabaseModule } from '../infrastructure/database/database.module.js';
+import { LinksModule } from '../domains/links/links.module.js';
 
 /**
  * Модули с исключительно пользовательским функционалом, описывающиеся в публичной документации.

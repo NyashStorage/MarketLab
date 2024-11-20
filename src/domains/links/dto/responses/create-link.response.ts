@@ -1,6 +1,6 @@
 import type { LinkModel } from '../../models/link.model.js';
 import { ApiProperty } from '@nestjs/swagger';
-import { CONFIGURATION } from '../../../config/configuration.js';
+import { CONFIGURATION } from '../../../../config/configuration.js';
 
 export class CreateLinkResponse {
   @ApiProperty({

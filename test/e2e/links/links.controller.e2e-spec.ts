@@ -1,9 +1,9 @@
-import type { CreateLinkRequest } from '../../../src/links/dto/requests/create-link.request.js';
+import type { CreateLinkRequest } from '../../../src/domains/links/dto/requests/create-link.request.js';
 import { supertestAgent } from '../../jest-e2e.setup.ts';
 import type { Test } from 'supertest';
 import { HttpStatus } from '@nestjs/common';
 import { randomStringGenerator } from '@nestjs/common/utils/random-string-generator.util.js';
-import { ApiError } from '../../../src/types/enums/api-error.enum.js';
+import { ApiError } from '../../../src/utils/types/enums/api-error.enum.js';
 import { v4 as uuid } from 'uuid';
 import { DELETED_LINK, EXISTENT_LINK } from '../../fixtures/links.fixture.ts';
 

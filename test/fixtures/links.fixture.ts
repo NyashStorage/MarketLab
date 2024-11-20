@@ -1,7 +1,7 @@
-import type { LinkModel } from '../../src/links/models/link.model.js';
+import type { LinkModel } from '../../src/domains/links/models/link.model.js';
 import { randomStringGenerator } from '@nestjs/common/utils/random-string-generator.util.js';
 import { v4 as uuid } from 'uuid';
-import type { CreateLinkType } from '../../src/links/types/link.type.js';
+import type { CreateLinkType } from '../../src/domains/links/types/link.type.js';
 
 export function mockLink({ payload }: CreateLinkType): LinkModel {
   return {

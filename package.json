@@ -13,7 +13,7 @@
     "build": "nest build -c ./configs/prod/nest-cli.json",
     "prod": "node ./dist/main.js",
     "typeorm:cli": "typeorm-ts-node-esm -d ./scripts/cli-data-source.ts",
-    "migration:generate": "npm run typeorm:cli -- migration:generate ./src/database/migrations/RenameMe",
+    "migration:generate": "npm run typeorm:cli -- migration:generate src/infrastructure/database/migrations/RenameMe",
     "migration:run": "npm run typeorm:cli -- migration:run",
     "migration:revert": "npm run typeorm:cli -- migration:revert",
     "test:unit": "npm run build && jest -c ./test/jest-unit.config.cjs --runInBand",

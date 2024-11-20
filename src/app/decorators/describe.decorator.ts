@@ -2,7 +2,7 @@ import type { HttpStatus, Type } from '@nestjs/common';
 import { applyDecorators } from '@nestjs/common';
 import type { ApiResponseCommonMetadata } from '@nestjs/swagger';
 import { ApiOperation, ApiResponse } from '@nestjs/swagger';
-import type { ApiError } from '../../types/enums/api-error.enum.js';
+import type { ApiError } from '../../utils/types/enums/api-error.enum.js';
 import { ErrorResponse } from '../dto/responses/error.response.js';
 
 type OkResponseType = {
