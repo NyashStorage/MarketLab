@@ -7,33 +7,44 @@
     "baseUrl": "./",
     "rootDirs": ["./src", "./scripts"],
     "outDir": "./dist",
+
     /* Настройки сборщика */
     "resolveJsonModule": true,
+    // Включено из-за использования SWC.
     "noEmit": true,
     "removeComments": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
+    // Default esModuleInterop true
+    // "allowSyntheticDefaultImports": true,
+    // Default module NodeNext
+    // "esModuleInterop": true,
+    // Default true
+    // "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    // "jsx": "react-jsx",
     "incremental": true,
     "skipLibCheck": true,
 
     /* Настройки линтинга */
+    "allowUnusedLabels": false,
     "strict": true,
-    // Отключено из-за DTO классов, где не нужен конструктор.
-    "strictPropertyInitialization": false,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
     // Отключено из-за возможности наличия слишком сложных для описания типов.
     "noImplicitAny": false,
-    "allowUnusedLabels": false,
-    "allowImportingTsExtensions": true,
-    "exactOptionalPropertyTypes": true,
     "noImplicitOverride": true,
     "noImplicitReturns": true,
     "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true
+    "noUnusedParameters": true,
+    // Отключено из-за DTO классов, где не всегда нужен конструктор.
+    "strictPropertyInitialization": false,
+    // Отключено из-за большого количества бойлерплейта.
+    "useUnknownInCatchVariables": false,
+    // Необходимо для тестов, которые исполняются в TS среде и требуют соответствующих импортов.
+    "allowImportingTsExtensions": true
   },
   "exclude": ["node_modules", "dist"]
 }
