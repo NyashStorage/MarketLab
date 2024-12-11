@@ -1,11 +1,13 @@
+/** @type {import("eslint").Linter.Config} */
 module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project: true,
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint/eslint-plugin'],
+  plugins: ['@typescript-eslint'],
   extends: [
+    'eslint:recommended',
     'plugin:@typescript-eslint/strict-type-checked',
     'plugin:@typescript-eslint/stylistic-type-checked',
     'plugin:prettier/recommended',
@@ -18,7 +20,7 @@ module.exports = {
   ignorePatterns: [
     '**/node_modules/**',
     '**/dist/**',
-    'src/database/migrations/**',
+    'src/**/database/migrations/**',
   ],
   rules: {
     '@typescript-eslint/consistent-type-imports': 'error',

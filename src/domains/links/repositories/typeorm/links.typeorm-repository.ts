@@ -2,8 +2,8 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { LinkEntity } from '../../entities/link.entity.js';
 import { Repository } from 'typeorm';
-import { LinkModel } from '../../models/link.model.js';
-import { CreateLinkType } from '../../types/link.type.js';
+import type { LinkModel } from '../../models/link.model.js';
+import type { CreateLinkType } from '../../types/link.type.js';
 import { LinksRepository } from '../links.repository.js';
 
 @Injectable()

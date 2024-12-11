@@ -1,12 +1,11 @@
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-const fs = require('fs');
+import fs from 'fs';
 
 const swcConfig = JSON.parse(
-  fs.readFileSync(`${__dirname}/../configs/prod/.swcrc`, 'utf-8'),
+  fs.readFileSync(`${import.meta.dirname}/../configs/prod/.swcrc`, 'utf-8'),
 );
 
 /** @type {import('jest').Config} */
-module.exports = {
+export default {
   rootDir: '.',
   moduleFileExtensions: ['ts', 'js', 'json'],
 

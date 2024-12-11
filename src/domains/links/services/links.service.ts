@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { LinksRepository } from '../repositories/links.repository.js';
-import { LinkModel } from '../models/link.model.js';
+import type { LinkModel } from '../models/link.model.js';
 import { CreateLinkRequest } from '../dto/requests/create-link.request.js';
 import { EntityNotFoundException } from '../../../app/exceptions/EntityNotFoundException.js';
 

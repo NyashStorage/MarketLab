@@ -11,8 +11,11 @@ import { DataSource } from 'typeorm';
 import { OPTIONS } from '../src/infrastructure/database/data-source-options.js';
 import { bootstrap } from '../src/core.js';
 
+// eslint-disable-next-line @typescript-eslint/init-declarations
 export let supertestAgent: SuperAgentTest;
+// eslint-disable-next-line @typescript-eslint/init-declarations
 let app: INestApplication;
+// eslint-disable-next-line @typescript-eslint/init-declarations
 let source: DataSource;
 
 global.beforeAll(async () => {

@@ -7,6 +7,7 @@ import { ApiError } from '../../../src/utils/types/enums/api-error.enum.js';
 import { v4 as uuid } from 'uuid';
 import { DELETED_LINK, EXISTENT_LINK } from '../../fixtures/links.fixture.ts';
 
+// eslint-disable-next-line @typescript-eslint/no-redundant-type-constituents
 function createLink(body: CreateLinkRequest | any): Test {
   return supertestAgent.post('/links').send(body);
 }

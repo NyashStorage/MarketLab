@@ -1,11 +1,16 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "target": "ESNext",
-    "lib": ["ESNext"],
+    "lib": [
+      "ESNext"
+      // "DOM",                                   // Для frontend проектов
+      // "DOM.Iterable"                           // Для frontend проектов
+    ],
     "baseUrl": "./",
-    "rootDirs": ["./src", "./scripts"],
+    "rootDirs": ["./src"],
     "outDir": "./dist",
 
     /* Настройки сборщика */
@@ -13,16 +18,14 @@
     // Включено из-за использования SWC.
     "noEmit": true,
     "removeComments": true,
-    // Default esModuleInterop true
-    // "allowSyntheticDefaultImports": true,
-    // Default module NodeNext
-    // "esModuleInterop": true,
-    // Default true
-    // "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true,
+    // "allowSyntheticDefaultImports": true,      // Стандартное при "esModuleInterop: true"
+    // "esModuleInterop": true,                   // Стандартное при "module: NodeNext"
+    // "forceConsistentCasingInFileNames": true,  // Стандартное
+    // "isolatedModules": true,                   // Стандартное при "verbatimModuleSyntax: true"
+    "verbatimModuleSyntax": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    // "jsx": "react-jsx",
+    // "jsx": "react-jsx",                        // Для frontend проектов
     "incremental": true,
     "skipLibCheck": true,
 
